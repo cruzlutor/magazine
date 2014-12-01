@@ -1,0 +1,105 @@
+body, html, .ember-view{
+	height:100%;
+}
+
+#container {
+	height: 100%;
+    margin: 0 auto;
+}
+
+#left {
+    float: left;
+    width:260px;
+    margin-right: -260px;
+    position: relative;
+}
+
+#left h1{
+	text-align: center;
+	font-size:40px;
+	font-weight: normal;
+	text-transform: uppercase;
+	background:#2F74AB;
+	color:#FFF;
+	margin:0px;
+	padding:30px 0;
+	font-family: 'Raleway', serif;
+}
+
+#left ul{
+	margin:30px 0 0 0;
+	padding:0px;
+	list-style: none;
+}
+
+#left li{
+	border-bottom:1px #343E58 solid;
+}
+
+#left a{
+	display: block;
+	padding:10px;
+	text-decoration: none;
+	color:#8795B8;
+	text-align:right;
+}
+#left a:hover, #left a.active{
+	background: #343E58;
+}
+
+#right {
+	color:#666;
+	min-height: 100%;
+	padding:30px;
+    float:left;
+    border-left: 260px solid #262D40;
+}
+
+#right h2{
+	margin:0 0 10px 0;
+	font-size:30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color:#2F74AB;
+	font-family: 'Raleway', serif;
+}
+
+#right .author{
+	margin:0 0 20px 0;
+	color:#999;
+	font-style: italic;
+}
+
+.index{
+	
+}
+
+#left h1:before {
+	content: '';
+	position: absolute;
+	top: 145px;
+	left: 0;
+	height: 15px;
+	width: 51%;
+	background: #2F74AB;
+	-webkit-transform: skew(0deg, 3deg);
+	-moz-transform: skew(0deg, 3deg);
+	-ms-transform: skew(0deg, 3deg);
+	-o-transform: skew(0deg, 3deg);
+	transform: skew(0deg, 3deg);
+}
+
+#left h1:after {
+	content: '';
+	position: absolute;
+	top: 145px;
+	right: 0;
+	height: 15px;
+	width: 50%;
+	background: #2F74AB;
+	-webkit-transform: skew(0deg, -3deg);
+	-moz-transform: skew(0deg, -3deg);
+	-ms-transform: skew(0deg, -3deg);
+	-o-transform: skew(0deg, -3deg);
+	transform: skew(0deg, -3deg);
+}​
