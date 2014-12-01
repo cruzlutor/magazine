@@ -1,3 +1,19 @@
+.main .container {
+    padding: 0 0
+}
+.container {
+    height: 100%;
+    display: table;
+    border-collapse: separate;
+}
+.row {
+    display: table-row
+}
+.col {
+    display: table-cell;
+    background-color: #fff;
+}
+
 body, html, .ember-view{
 	height:100%;
 }
@@ -7,14 +23,18 @@ body, html, .ember-view{
     margin: 0 auto;
 }
 
-#left {
+/*#left {
     float: left;
     width:260px;
     margin-right: -260px;
     position: relative;
 }
-
-#left h1{
+*/ 
+.left{
+    width:260px;
+    background: #262D40;
+}
+.left h1{
 	text-align: center;
 	font-size:40px;
 	font-weight: normal;
@@ -26,36 +46,37 @@ body, html, .ember-view{
 	font-family: 'Raleway', serif;
 }
 
-#left ul{
+.left h1 i {
+    display: none;
+}
+
+.left ul{
 	margin:30px 0 0 0;
 	padding:0px;
 	list-style: none;
 }
 
-#left li{
+.left li{
 	border-bottom:1px #343E58 solid;
 }
 
-#left a{
+.left a{
 	display: block;
 	padding:10px;
 	text-decoration: none;
 	color:#8795B8;
 	text-align:right;
 }
-#left a:hover, #left a.active{
+.left a:hover, .left a.active{
 	background: #343E58;
 }
 
-#right {
+.right {
 	color:#666;
-	min-height: 100%;
 	padding:30px;
-    float:left;
-    border-left: 260px solid #262D40;
 }
 
-#right h2{
+.right h2{
 	margin:0 0 10px 0;
 	font-size:30px;
 	font-weight: bold;
@@ -64,7 +85,7 @@ body, html, .ember-view{
 	font-family: 'Raleway', serif;
 }
 
-#right .author{
+.right .author{
 	margin:0 0 20px 0;
 	color:#999;
 	font-style: italic;
@@ -73,14 +94,14 @@ body, html, .ember-view{
 .index{
 	
 }
-
-#left h1:before {
+/*
+.left h1:before {
 	content: '';
 	position: absolute;
 	top: 145px;
 	left: 0;
 	height: 15px;
-	width: 51%;
+	width: 139px;
 	background: #2F74AB;
 	-webkit-transform: skew(0deg, 3deg);
 	-moz-transform: skew(0deg, 3deg);
@@ -89,17 +110,57 @@ body, html, .ember-view{
 	transform: skew(0deg, 3deg);
 }
 
-#left h1:after {
+.left h1:after {
 	content: '';
 	position: absolute;
 	top: 145px;
-	right: 0;
+	left: 130px;
 	height: 15px;
-	width: 50%;
+	width: 130px;
 	background: #2F74AB;
 	-webkit-transform: skew(0deg, -3deg);
 	-moz-transform: skew(0deg, -3deg);
 	-ms-transform: skew(0deg, -3deg);
 	-o-transform: skew(0deg, -3deg);
 	transform: skew(0deg, -3deg);
-}​
+}​*/
+
+@media only screen and (max-width : 700px) {
+    .container{
+        display: block;
+    }
+    .row{
+        display: block;
+    }
+    .col{
+        display:block;
+    }
+    .left{
+        width:100%;
+    }
+    .left h1{
+        padding: 15px 0;
+        font-size: 25px;
+    }
+
+    .left h1 i{
+        position: absolute;
+        top:18px;
+        left:20px;
+        display:block;
+    } 
+    .left ul{
+        height:0px;
+        overflow:hidden;
+    }
+
+    .left ul.active{
+        height:auto;
+    }
+    .left li a{
+        text-align: left;
+    }
+    .right{
+        padding:20px;
+    }
+}

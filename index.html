@@ -2,36 +2,42 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
         <title>Travel Magazine</title>
+        <!-- <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css"> -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <script type="text/x-handlebars">
-            <div id="container">
 
-                <div id="left">
-                    <h1>Travel Magazine</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="left col">
 
-                    <ul>
-                        <li>{{#link-to 'articulo1'}}Decameron explorer Colombia{{/link-to}}</li>
-                        <li>{{#link-to 'articulo2'}}New York{{/link-to}}</li>
-                        <li>{{#link-to 'articulo3'}}The South of Florida{{/link-to}}</li>
-                        <li>{{#link-to 'articulo4'}}Hagia Sophia Museum{{/link-to}}</li>
-                        <li>{{#link-to 'articulo5'}}Paris{{/link-to}}</li>
-                        <li>{{#link-to 'articulo6'}}Terrifying Travels{{/link-to}}</li>
-                        <li>{{#link-to 'articulo7'}}The Nasca Lines{{/link-to}}</li>
-                        <li>{{#link-to 'articulo8'}}The best beaches in the world{{/link-to}}</li>
-                        <li>{{#link-to 'articulo9'}}World’s famous souvenirs{{/link-to}}</li>
-                    </ul>
+                        <h1> <i id="menu-icon" class="fa fa-bars"></i> Travel Magazine</h1>
+
+                        <ul id="menu-list" class="active">
+                            <li>{{#link-to 'articulo1'}}Decameron explorer Colombia{{/link-to}}</li>
+                            <li>{{#link-to 'articulo2'}}New York{{/link-to}}</li>
+                            <li>{{#link-to 'articulo3'}}The South of Florida{{/link-to}}</li>
+                            <li>{{#link-to 'articulo4'}}Hagia Sophia Museum{{/link-to}}</li>
+                            <li>{{#link-to 'articulo5'}}Paris{{/link-to}}</li>
+                            <li>{{#link-to 'articulo6'}}Terrifying Travels{{/link-to}}</li>
+                            <li>{{#link-to 'articulo7'}}The Nasca Lines{{/link-to}}</li>
+                            <li>{{#link-to 'articulo8'}}The best beaches in the world{{/link-to}}</li>
+                            <li>{{#link-to 'articulo9'}}World’s famous souvenirs{{/link-to}}</li>
+                        </ul>
+                    </div>
+
+                    <div class="right col">
+                        {{outlet}}
+                    </div>
                 </div>
-
-                <div id="right">
-                    {{outlet}}
-                </div>
-                
             </div>
+
         </script>
 
         <script type="text/x-handlebars" id="index">

@@ -11,3 +11,15 @@ App.Router.map(function() {
 	this.resource('articulo8');
 	this.resource('articulo9');
 });
+
+
+$(document).on('ready', function(){
+    $('#menu-icon').on('click', function(){
+        $('#menu-list').toggleClass('active');
+    });
+
+    $('#menu-list a').on('click', function(){
+        $('#menu-list').toggleClass('active');
+        $(document).scrollTop(0);
+    });
+})
