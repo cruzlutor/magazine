@@ -94,6 +94,10 @@ body, html, .ember-view{
 .index{
 	
 }
+
+.right img{
+	height:200px;
+}
 /*
 .left h1:before {
 	content: '';

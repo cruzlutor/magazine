@@ -10,6 +10,8 @@ App.Router.map(function() {
 	this.resource('articulo7');
 	this.resource('articulo8');
 	this.resource('articulo9');
+	this.resource('articulo10');
+	this.resource('articulo11');
 });
 
 
